@@ -84,7 +84,6 @@
     });
 
     var result = [];
-    var result_data = ``;
     var stateList = [];
     var districtList = [];
     var select_data = `<option value="">Select State</option>`;
@@ -121,7 +120,7 @@
         .then(data=>{
             result = data.sessions;
             result.forEach(slot => {
-                result_data += `<tr>
+                result_data = `<tr>
                         <td>${slot.name}</td>
                         <td>${slot.address}</td>
                         <td>${slot.from}</td>
