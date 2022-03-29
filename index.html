@@ -88,6 +88,7 @@
     var districtList = [];
     var select_data = `<option value="">Select State</option>`;
     var dist_select_data = `<option value="">Select District</option>`;
+    var result_data = ``;
     dname.innerHTML=dist_select_data;
     fetch(`https://cdndemo-api.co-vin.in/api/v2/admin/location/states`)
     .then(res=>res.json())
@@ -120,7 +121,7 @@
         .then(data=>{
             result = data.sessions;
             result.forEach(slot => {
-                var result_data = `<tr>
+                result_data = `<tr>
                         <td>${slot.name}</td>
                         <td>${slot.address}</td>
                         <td>${slot.from}</td>
